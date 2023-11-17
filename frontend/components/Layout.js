@@ -27,7 +27,7 @@ function Navigation() {
               className="block text-2xl max-w-max text-white font-medium"
               href="/"
             >
-              Food Order App
+              Order In
             </Link>
           </div>
 

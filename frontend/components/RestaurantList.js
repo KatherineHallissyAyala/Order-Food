@@ -33,7 +33,7 @@ function RestaurantCard({ data }) {
           className="w-full rounded-2xl"
           height={300}
           width={300}
-          src={`${"https://order-6fq5.onrender.com"}${
+          src={`${process.env.STRAPI_URL || "http://localhost:1337"}${
             data.attributes.image.data.attributes.url
           }`}
           alt=""
