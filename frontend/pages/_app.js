@@ -3,7 +3,7 @@ import { AppProvider } from "@/context/AppContext";
 import "@/styles/globals.css";
 import Layout from "@/components/Layout";
 
-const API_URL = process.env.STRAPI_URL || "http://localhost:1337";
+const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
 console.log("STRAPI_URL: ", API_URL);
 
 export const client = new ApolloClient({
