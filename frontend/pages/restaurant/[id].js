@@ -2,6 +2,7 @@ import { gql, useQuery } from "@apollo/client";
 import { centsToDollars } from "@/utils/centsToDollars";
 import { useRouter } from "next/router";
 import { useAppContext } from "@/context/AppContext";
+import { useState } from "react";
 
 import Image from "next/image";
 import Loader from "@/components/Loader";
