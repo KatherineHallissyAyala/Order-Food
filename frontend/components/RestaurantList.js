@@ -25,7 +25,6 @@ const QUERY = gql`
 `;
 
 function RestaurantCard({ data }) {
-  console.log(`Added config for Image link: ${process.env.NEXT_PUBLIC_STRAPI_URL}${data.attributes.image.data.attributes.url}`);
   return (
     <div className="w-full md:w-1/2 lg:w-1/3 p-4">
       <div className="h-full bg-gray-100 rounded-2xl">
