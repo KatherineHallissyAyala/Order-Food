@@ -97,9 +97,9 @@ export default function Restaurant() {
   if (loading) return <Loader />;
 
   if (data.restaurant.data.attributes.dishes.data.length) {
-    const searchQuery = data.restaurants.data.attributes.dishes.data.filter((dishQuery) =>
-      dishQuery.attributes.name.toLowerCase().includes(query.toLowerCase())
-    );
+    //const searchQuery = data.restaurants.data.attributes.dishes.data.filter((dishQuery) =>
+    //  dishQuery.attributes.name.toLowerCase().includes(query.toLowerCase())
+    //);
     const { restaurant } = data;
 
     return (
