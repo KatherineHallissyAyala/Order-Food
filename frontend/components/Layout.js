@@ -79,7 +79,7 @@ function Navigation() {
 }
 
 export default function Layout(props) {
-  const title = "Welcome to Next JS";
+  const title = "Order In And Eat";
 
   return (
     <div>
