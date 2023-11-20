@@ -10,7 +10,7 @@ export const AppProvider = ({ children }) => {
     Cookie.get("cart") !== "undefined" ? Cookie.get("cart") : null;
 
   const [user, setUser] = useState(null);
-  const [showCart, setShowCart] = useState(false);
+  const [showCart, setShowCart] = useState(true);
   const [cart, setCart] = useState(
     cartCookie ? JSON.parse(cartCookie) : { items: [], total: 0 }
   );
@@ -28,7 +28,6 @@ export const AppProvider = ({ children }) => {
   }, [cart]);
 
   const addItem = (item) => {
-    setShowCart = true;
     let newItem = cart.items.find((i) => i.id === item.id);
     if (!newItem) {
       const newItem = {
@@ -68,8 +67,6 @@ export const AppProvider = ({ children }) => {
 
   const resetCart = () => {
     setCart({ items: [], total: 0 });
-    setShowCart = false;
-
   };
 
   return (
