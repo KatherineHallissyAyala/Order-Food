@@ -6,6 +6,8 @@ import { useAppContext } from "@/context/AppContext";
 import Image from "next/image";
 import Loader from "@/components/Loader";
 
+const [query, setQuery] = useState("");
+
 const GET_RESTAURANT_DISHES = gql`
   query ($id: ID!) {
     restaurant(id: $id) {
@@ -99,6 +101,12 @@ export default function Restaurant() {
         <h1 className="text-4xl font-bold text-green-600">
           {restaurant.data.attributes.name}
         </h1>
+        <input
+            className="appearance-none block w-full p-3 leading-5 text-coolGray-900 border border-coolGray-200 rounded-lg shadow-md placeholder-coolGray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+            type="text"
+            placeholder="Search for dishes"
+            onChange={(e) => setQuery(e.target.value)}
+          />
         <div className="py-16 px-8 bg-white rounded-3xl">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap -m-4 mb-6">
