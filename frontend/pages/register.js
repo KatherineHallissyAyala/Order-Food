@@ -35,6 +35,7 @@ export default function RegisterRoute() {
     });
     if (data?.register.user) {
       setUser(data.register.user);
+      alert("You have successfully created an Order In account!");
       router.push("/");
       Cookie.set("token", data.register.jwt);
     }
