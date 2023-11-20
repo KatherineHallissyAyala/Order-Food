@@ -6,8 +6,6 @@ import { useAppContext } from "@/context/AppContext";
 import Image from "next/image";
 import Loader from "@/components/Loader";
 
-const [query, setQuery] = useState("");
-
 const GET_RESTAURANT_DISHES = gql`
   query ($id: ID!) {
     restaurant(id: $id) {
@@ -86,6 +84,8 @@ function DishCard({ data }) {
 }
 
 export default function Restaurant() {
+  const [query, setQuery] = useState("");
+
   const router = useRouter();
   const { loading, error, data } = useQuery(GET_RESTAURANT_DISHES, {
     variables: { id: router.query.id },
