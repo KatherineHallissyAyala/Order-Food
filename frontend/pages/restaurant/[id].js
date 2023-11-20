@@ -84,6 +84,7 @@ function DishCard({ data }) {
 }
 
 export default function Restaurant() {
+  console.log("Looking for search bar");
   const [query, setQuery] = useState("");
 
   const router = useRouter();
